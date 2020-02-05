@@ -3,7 +3,7 @@ const generateFiles = require('./lib/generateFiles');
 const options = {
   jsEntry: 'main',
   processHTML: 'yes',
-  htmlPreference: 'no',
+  htmlPreference: 'pug',
   processStyles: 'yes',
   stylesPreference: 'separate-files',
   stylesType: 'scss',
