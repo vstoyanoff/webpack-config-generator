@@ -1,4 +1,4 @@
-const generateFile = require('./lib/generateFile');
+const generateFiles = require('./lib/generateFiles');
 
 const options = {
   jsEntry: 'main',
@@ -21,4 +21,4 @@ const options = {
   purgeCss: true,
 };
 
-generateFile(options);
+generateFiles(options);

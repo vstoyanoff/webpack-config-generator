@@ -4,7 +4,7 @@
   "description": "Generate webpack config based on user preferences",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js && prettier --single-quote --trailing-comma es5 --write 'generated/webpack.config.js'"
+    "build": "node index.js && prettier --config ./prettier.config.js --write './generated/**/*.{js,json,html}'"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mobbdev/webpack-config-generator#readme",
   "dependencies": {
     "mkdirp": "^1.0.3",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.1"
   }
 }
