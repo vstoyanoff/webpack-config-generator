@@ -4,7 +4,7 @@
   "description": "Generate webpack config based on user preferences",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js && prettier --config ./prettier.config.js --write './generated/**/*.{js,json,html}'"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
