@@ -1,24 +1,12 @@
-const generateFiles = require('./lib/generateFiles');
+const http = require('http');
+const app = require('./app');
 
-const options = {
-  jsEntry: 'main',
-  processHTML: 'yes',
-  htmlPreference: 'pug',
-  processStyles: 'yes',
-  stylesPreference: 'separate-files',
-  stylesType: 'scss',
-  stylesEntry: 'style',
-  processImages: 'yes',
-  resolveSize: '2000',
-  imageUrlResolve: true,
-  imageOptimization: true,
-  svgOptimization: true,
-  optimizations: 'yes',
-  devServer: 'yes',
-  splitChunks: true,
-  webp: true,
-  criticalCss: true,
-  purgeCss: true,
-};
-
-generateFiles(options);
+(async () => {
+  try {
+    app.set('port', 15015);
+    const httpServer = http.createServer(app);
+    httpServer.listen(15015);
+  } catch (err) {
+    console.error(err);
+  }
+})();
