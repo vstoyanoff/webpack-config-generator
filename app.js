@@ -4,7 +4,13 @@ const bodyParser = require('body-parser');
 const rimraf = require('rimraf');
 const generateFiles = require('./lib/generateFiles');
 
-const app = express().use('*', cors());
+const app = express().use(
+  '*',
+  cors({
+    origin: 'https://mobb.dev',
+    optionsSuccessStatus: 200,
+  })
+);
 
 app.get('/download', (req, res) => {
   const id = req.query.id;
