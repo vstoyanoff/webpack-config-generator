@@ -3,9 +3,10 @@ const app = require('./app');
 
 (async () => {
   try {
-    app.set('port', 15015);
+    const port = process.env.PORT || 15015;
+    app.set('port', port);
     const httpServer = http.createServer(app);
-    httpServer.listen(15015);
+    httpServer.listen(port);
   } catch (err) {
     console.error(err);
   }
