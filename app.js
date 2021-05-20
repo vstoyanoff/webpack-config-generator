@@ -8,7 +8,7 @@ const verifyRecaptcha = require('./lib/verifyRecaptcha.js');
 const app = express().use(
   '*',
   cors({
-    origin: 'https://mobb.dev',
+    origin: 'https://mobbdev.netlify.app',
     optionsSuccessStatus: 200,
   })
 );
